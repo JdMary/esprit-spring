@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
+
 @Entity
 @Table
 @Getter
@@ -16,4 +18,8 @@ public class Restaurant implements Serializable {
     private Long idRestauant;
     private String nom;
     private Long nbPlacesMax;
+    @OneToMany
+    private List<Menu> menus;
+    @ManyToOne
+    private ChaineRestauration chaineRestaurationsMapped;
 }

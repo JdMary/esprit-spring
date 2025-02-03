@@ -1,13 +1,12 @@
 package com.example.springcrashcourses.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
 @Data
+@Entity
+@Table
 public class Composant implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,4 +14,8 @@ public class Composant implements Serializable {
     private Long idComposant;
     private String nomComposant;
     private Float prix;
+    @ManyToOne()
+    private Menu menuMapped;
+    @OneToOne()
+    private DetailComposant detailComposant;
 }

@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table
@@ -19,5 +20,7 @@ public class ChaineRestauration implements Serializable {
     private String libelle;
     @Temporal(TemporalType.DATE)
     private LocalDate dateCreation;
+    @OneToMany(mappedBy = "chaineRestaurationsMapped")
+    private List<Restaurant> restaurantList;
 
 }

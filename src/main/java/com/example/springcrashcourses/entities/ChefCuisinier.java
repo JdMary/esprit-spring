@@ -1,13 +1,14 @@
 package com.example.springcrashcourses.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
+
 @Data
+@Entity
+@Table
 public class ChefCuisinier implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,5 +16,8 @@ public class ChefCuisinier implements Serializable {
     private Long idChefCuisinier;
     private String nom;
     private String prenom;
+    @Enumerated(EnumType.STRING)
     private TypeChef typeChef;
+    @ManyToMany(mappedBy = "chefMapped")
+    private List<Menu> menuList;
 }
