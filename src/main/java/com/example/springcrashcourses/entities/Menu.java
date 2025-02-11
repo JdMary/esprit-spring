@@ -27,6 +27,7 @@ public class Menu implements Serializable {
     @Enumerated(EnumType.STRING)
     private TypeMenu typeMenu;
     private Float prixTotal;
+    //esm el champs declare fel parent
     @OneToMany(mappedBy = "menuMapped")
     private List<Commande> commandeList;
     @ManyToMany
