@@ -3,9 +3,11 @@ package com.example.springcrashcourses.services;
 import com.example.springcrashcourses.entities.ChefCuisinier;
 import com.example.springcrashcourses.entities.Commande;
 import com.example.springcrashcourses.repositories.CommandeRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CommandeService implements ICommandeService{
 
     CommandeRepository commandeRepository;

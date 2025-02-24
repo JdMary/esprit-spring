@@ -7,7 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
-
+//component est generique
+//pas besoin d'ajouter un @Repositoy car il herite JPA
 public interface MenuRepository extends JpaRepository<Menu,Long> {
     //1.5. liste des restaurants ayant une capacité supérieur à 100 (paramètre) et dont la chaine de restauration a été crée avant 2020 (paramètre)
     List<Menu> findAllByTypeMenuAndPrixTotalGreaterThan(TypeMenu typeMenu, Float montant);

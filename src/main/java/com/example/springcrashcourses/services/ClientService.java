@@ -2,12 +2,16 @@ package com.example.springcrashcourses.services;
 
 import com.example.springcrashcourses.entities.Client;
 import com.example.springcrashcourses.repositories.ClientRepository;
+import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 @Slf4j
 public class ClientService implements IClientService{
     ClientRepository clientRepository;
@@ -18,7 +22,7 @@ public class ClientService implements IClientService{
 
     @Override
     public Client addClient(Client e) {
-        Client c=Client.builder().idClient(1L).identifiant(String.valueOf(2)).build();
+        //Client c=Client.builder().idClient(1L).identifiant(String.valueOf(2)).build();
         return clientRepository.save(e);
     }
 

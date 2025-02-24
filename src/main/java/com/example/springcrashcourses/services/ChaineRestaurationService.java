@@ -2,11 +2,12 @@ package com.example.springcrashcourses.services;
 
 import com.example.springcrashcourses.entities.ChaineRestauration;
 import com.example.springcrashcourses.repositories.ChaineRestaurationRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ChaineRestaurationService implements IChaineRestaurationService{
-
     ChaineRestaurationRepository chaineRestaurationRepository;
     @Override
     public List<ChaineRestauration> retrieveAllChaineResataution() {

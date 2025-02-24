@@ -19,7 +19,7 @@ import java.util.Date;
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @EqualsAndHashCode
-@Builder
+
 @Slf4j
 public class Client implements Serializable {
     //auto une table hibernate sequence se generre propreement

@@ -2,9 +2,10 @@ package com.example.springcrashcourses.services;
 
 import com.example.springcrashcourses.entities.ChefCuisinier;
 import com.example.springcrashcourses.repositories.ChefCuisinierRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class ChefCuisinierService implements IChefCuisinier{
 
     ChefCuisinierRepository cuisinierRepository;
