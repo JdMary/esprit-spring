@@ -13,13 +13,13 @@ import java.util.Date;
 @Getter
 @Setter
 //contructor for the fields that are annotated with @notnull
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @EqualsAndHashCode
-
+@Builder
 @Slf4j
 public class Client implements Serializable {
     //auto une table hibernate sequence se generre propreement

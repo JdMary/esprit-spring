@@ -3,6 +3,7 @@ package com.example.springcrashcourses.services;
 import com.example.springcrashcourses.entities.Client;
 import com.example.springcrashcourses.repositories.ClientRepository;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

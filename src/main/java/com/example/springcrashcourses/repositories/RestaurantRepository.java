@@ -11,3 +11,4 @@ public interface RestaurantRepository extends JpaRepository<Restaurant,Long> {
     List<Restaurant> findByNbPlacesMaxGreaterThanAndChaineRestaurationsMappedDateCreationBefore(Long capacity, LocalDate date);
 
 }
+/*servlet: controller clases cest une classe java qui va etre exposepar http*/
