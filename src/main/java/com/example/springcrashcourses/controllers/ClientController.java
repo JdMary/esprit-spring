@@ -3,6 +3,9 @@ package com.example.springcrashcourses.controllers;
 import com.example.springcrashcourses.entities.Client;
 import com.example.springcrashcourses.services.ClientService;
 import com.example.springcrashcourses.services.IClientService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +21,10 @@ import java.util.List;
 public class ClientController {
     IClientService clientService;
     @GetMapping("/retrieve-all-clients")
+    @Operation(description = "récuperer tous les clients")
+    @ApiResponses(value = {
+            @ApiResponse()
+    })
     public List<Client> getClients() {
         return clientService.retrieveAllClients();
 
